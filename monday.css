@@ -7,6 +7,8 @@ body {
   position: relative;
   margin: 0 auto;
   z-index: 0;
+  height: 100%;
+  width: 100%;
 }
 
 body::after {
@@ -27,6 +29,41 @@ body::after {
 
 .logo {
   size: 25px;
+}
+
+p.nav-quote {
+  display: inline;
+}
+
+.nav-quote {
+  font-family: 'Anton', sans-serif;
+  color: whitesmoke;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  text-align: center;
+  display: inline-block;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.center {
+  text-align: center;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
 }
 .col-sm-2 {
   display: table;
@@ -50,7 +87,13 @@ body::after {
   text-decoration: none;
 }
 
-.bio {
+.connect-hr {
+  border-top: solid rgb(187,12,0);
+  border-width: 2px;
+  width: 25%;
+}
+
+.display-4 {
   font-family: 'Anton', sans-serif;
   text-align: center;
   color: whitesmoke;
@@ -60,13 +103,14 @@ body::after {
 
 .fan {
   font-family: 'Anton', sans-serif;
+  text-align: center;
   text-transform: uppercase;
   font-size: 100px;
   font-weight: bold;
   background: linear-gradient(#000 0%, #bb0c00 100%);
   background-clip: text;
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .name {
@@ -82,7 +126,25 @@ body::after {
     padding-bottom: 0;  
 }
 
-ul {
+.navbar {
+    background: rgb(187,12,0);
+    background: linear-gradient(0deg, rgba(187,12,0,1) 0%, rgba(10,10,10,1) 100%); 
+  }
+
+  .logo-home{
+    height: 100%;
+    width: 100%;
+  }
+
+  .send {
+    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    width: 55px;
+  }
+
+  
+  .navbar-nav li { 
+    float: right;
     font-family: 'Anton', sans-serif;
     text-align: center;
     color: whitesmoke;
@@ -95,20 +157,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: rgb(187,12,0);
-    background: linear-gradient(0deg, rgba(187,12,0,1) 0%, rgba(10,10,10,1) 100%); 
-  }
-
-
-  .send {
-    font-weight: bold;
-    font-family: 'Anton', sans-serif;
-    width: 55px;
-  }
-
-  
-  li { 
-    float: right;
   }
   
   li a {
@@ -197,13 +245,59 @@ ul {
     max-width: 100%;
     height: auto;
   }
+
+  .connect {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100px;
+    text-shadow: 4px 4px 8px #000000;
+    margin-top: 15px;
+  }
+
+  .fa-youtube {
+    color: #FF0000
+  }
+
+  .fa-itunes {
+    background: linear-gradient(140deg, rgba(255,93,112,1) 0%, rgba(52,196,248,1) 63%);
+    background-clip: text;
+	  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .fa-spotify {
+    color: #1ED760;
+  }
+
+  .fa-google-play{
+    color: #FF5722;
+  }
+
+  .fa-facebook{
+    color: #3B579D
+  }
+
+  .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background-clip: text;
+	  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.fa-youtube, .fa-itunes, .fa-spotify, .fa-google-play, .fa-facebook, .fa-instagram, .fa-stitcher, .fa-tunein {
+  font-size: 4em;
+  margin: 1rem;
+}
+
   /* //carousel start */
   .carousel {
     position: relative;
+    height: 75%;
   }
   .carousel-inner {
-    position: relative;
-    width: 100%;
+    width: 75%;
+    height: 75%;
     overflow: hidden;
   }
   .carousel-inner > .item {
@@ -422,3 +516,58 @@ ul {
     }
   }
   /* //carousel-end */
+
+  /*---Media Queries --*/
+@media (max-width: 992px) {
+  .social padding {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 45%;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
+  .social padding{
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+  .connect {
+    font-size: 200%;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 40%;
+  }
+  .display-4 {
+    font-size: 160%;
+  }
+  .social padding{
+    font-size: 2em;
+    padding: .7rem;
+  }
+  .connect {
+    font-size: 160%;
+  }
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
