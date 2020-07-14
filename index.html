@@ -3,6 +3,7 @@
 <html lang="en" class="index">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Arvo:700|Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="monday.css">
@@ -19,33 +20,25 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-        <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <div class="d-none d-lg-block center">
-            <p class="d-none d-lg-block nav-quote">"Just remember everyone of you have hated a Monday once or twice in your life!! So let Monday love you!!" -Miranda Monday
-            </p>
-            </div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="podcasts.html">Podcasts</a></li>
-                <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            </ul>
+    <nav class="navbar">
+        <div>
+            <p class="d-none d-lg-block nav-quote">"Just remember everyone of you have hated a Monday once or twice in your life!! So let Monday love you!!"  -Miranda Monday</p>
         </div>
-    </div>
-    </nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+</nav>
    
 <div class="container-fluid">
     <div class="row">
 <div class="col-md-6">
     <img class="logo-home" src="assets/MLtransBG.png">
 </div>
-<div class="col-md-6">
+<div class="col-md-6" id="welcome">
     <p class="display-4">First and foremost I want to start with, we, here at Monday Love Podcast are fans of the <br> </p>
         <p class="fan">FANS!!</p>
         <p class="display-4"> Not only do we want to bring the fans who and what they want to see but, this is also a platform for the big Dawgs to become more familiar to their fans and even more importantly a world stage for the folks on the come up!!</p>
@@ -79,7 +72,7 @@
                 <p>&copy; 2019 <a href="http://www.josephkempproductions.com/" class="email">Joseph Kemp Productions</a>
             </div> 
             <div class="col-md-4">   
-                <p>Website Created by Joseph Kemp Productions<p></p>
+                <p>Website Created by Joseph Kemp Productions</p>
             </div>
             <div class="col-md-4">
                 <a href="mailto:Josephkempproductions@gmail.com" class="email">Email Joseph Kemp Productions</a> 
