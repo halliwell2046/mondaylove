@@ -154,7 +154,7 @@ li a:hover {
 .cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
  .about-cards {
@@ -429,6 +429,13 @@ li a:hover {
   background-color: black;
 }
 
+.both {
+  margin-top: 15rem;
+  margin-left: 10rem;
+  height: 25rem;
+  width: 60rem;
+}
+
 /*media queries*/
 
 @media (max-width: 1370px){
@@ -449,6 +456,13 @@ li a:hover {
   .about-img {
     height: 25rem;
     width: 25rem;
+  }
+
+  .both {
+    margin-top: 15rem;
+    margin-left: 2.5rem;
+    height: 15rem;
+    width: 55rem;
   }
 }
 
@@ -526,6 +540,10 @@ opacity: .5;
   .about-phone h3{
     text-decoration: underline;
     font-size: 100%;
+  }
+
+  .both {
+    display: none;
   }
 
   .footer {
