@@ -454,8 +454,7 @@ li a:hover {
   }
 
   .about-img {
-    height: 25rem;
-    width: 25rem;
+   border-radius: 50%;
   }
 
   .both {
